@@ -20,34 +20,24 @@
             android:layout_height="@dimen/icon_size"
             android:layout_marginStart="18dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:sleepImage="@{sleep}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:sleepImage="@{sleep}"
             tools:srcCompat="@drawable/ic_sleep_5" />
-
-        <TextView
-            android:id="@+id/sleep_length"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            app:sleepDurationFormatted="@{sleep}"
-            app:layout_constraintStart_toEndOf="@+id/quality_img"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Wednesday" />
 
         <TextView
             android:id="@+id/quality_string"
             android:layout_width="0dp"
             android:layout_height="20dp"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/quality_img"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="@+id/quality_img"
+            app:layout_constraintTop_toBottomOf="@+id/quality_img"
             app:sleepQualityString="@{sleep}"
-            app:layout_constraintEnd_toEndOf="@+id/sleep_length"
-            app:layout_constraintStart_toStartOf="@+id/sleep_length"
-            app:layout_constraintTop_toBottomOf="@+id/sleep_length"
-            tools:text="Excellent!!!" />
+            tools:text="Excellent!" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
